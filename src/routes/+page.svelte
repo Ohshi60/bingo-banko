@@ -32,7 +32,7 @@
 	</div>
 
 	<div class="grid place-items-center">
-		<p class="text-[256px]">
+		<p class="text-[400px]">
 			{pickedNumbers.length ? pickedNumbers[pickedNumbers.length - 1] : 'Start'}
 		</p>
 		<p class="text-base text-blue-600 pt-10">{pickedNumbers}</p>
