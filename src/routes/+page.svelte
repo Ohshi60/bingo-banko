@@ -19,11 +19,9 @@
 	}
 </script>
 
-<div class="flex">
-	<div class="flex flex-row flex-wrap space-between w-1/2">
+<div class="grid grid-cols-2 h-screen">
+	<div class="grid grid-cols-10">
 		{#each numbers as number}
-			<!-- {#if pickedNumbers.includes(number)}
-      {/if} -->
 			<p
 				on:click={() => clickedNumber(number)}
 				class="px-4 {pickedNumbers.includes(number) ? 'bg-red-200' : ''}"
@@ -32,8 +30,11 @@
 			</p>
 		{/each}
 	</div>
-	<div class="flex flex-col items-center justify-center h-screen w-1/2">
-		<p class="text-9xl">{pickedNumbers.length ? pickedNumbers[pickedNumbers.length - 1]: 'Start'}</p>
+
+	<div class="grid place-items-center">
+		<p class="text-[256px]">
+			{pickedNumbers.length ? pickedNumbers[pickedNumbers.length - 1] : 'Start'}
+		</p>
 		<p class="text-base text-blue-600 pt-10">{pickedNumbers}</p>
 	</div>
 </div>
