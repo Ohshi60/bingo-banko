@@ -1,7 +1,3 @@
-<!-- <h1 class="text-3xl font-bold underline text-red">
-  Hello world!
-</h1>
- -->
 <script>
 	// create array with 1-90
 	let numbers = Array.from(Array(91).keys()).slice(1);
@@ -19,12 +15,16 @@
 	}
 </script>
 
-<div class="grid grid-cols-2 h-screen">
+<div class="grid grid-cols-2 h-screen w-screen">
 	<div class="grid grid-cols-10">
 		{#each numbers as number}
 			<p
 				on:click={() => clickedNumber(number)}
-				class="px-4 {pickedNumbers.includes(number) ? 'bg-red-200' : ''}"
+				class="border-solid border-2 text-center border-slate-50 text-4xl {pickedNumbers.includes(
+					number
+				)
+					? 'bg-red-400'
+					: ''}"
 			>
 				{number}
 			</p>
@@ -35,7 +35,6 @@
 		<p class="text-[400px]">
 			{pickedNumbers.length ? pickedNumbers[pickedNumbers.length - 1] : 'Start'}
 		</p>
-		<p class="text-base text-blue-600 pt-10">{pickedNumbers}</p>
 	</div>
 </div>
 
